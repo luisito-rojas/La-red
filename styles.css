@@ -1,0 +1,437 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background: #000000; 
+    color:#ffffff;
+    background-color: #000000;
+
+
+    /*Fondo de pantalla sacado de heroe patrons*/
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23fb1308' fill-opacity='0.1'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+/*cambiamos el tamaño de nuestra fuente*/
+font-size: 14px;
+/*Enlace complementario para cambiar el estilo de fuente sacado de google fonts oswald*/
+font-family: 'Oswald', sans-serif;
+}
+
+a{
+    color:#ffffff ;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+
+.title{
+    font-size: 30px;
+    color:aqua ;
+    background:#262626 ;
+    width:90% ;
+    margin: auto ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: .6;    
+}
+
+
+/*accedemos a todo lo que venga dentro de la clase conteiner*/
+.container{
+    width:90% ;
+    margin: auto ;
+}
+/*Navigation*/
+.nav-main{
+    font-size: 17;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px ;
+    padding: 20px 0;
+}
+/*para cambier de tamaño mi logo*/
+.nav-brand{
+
+    width: 50px;
+}
+ /*nav left (navegacion izquierda)*/
+ .nav-main ul{
+display: flex;
+ }
+ /*para añadir espacio a las etiquetas del nav left (navegacion izquierda) */
+.nav-main ul li{
+    padding: 10px;
+}
+
+/*Para hacer un espaciado en las etiquetas*/
+.nav-main ul li a{
+padding: 10px;
+}
+/*Vamos a hacer que las etiquetas  parezcan enlaces y aparezca un subrayado*/
+.nav-main ul li a:hover {
+    border-bottom: 3px  solid #ffffff;
+}
+
+/*ahora que vamos a pegar las etieuetas al logo pero dejando un margen  */
+.nav-main ul.nav-menu-right{
+    flex: 1px;
+    margin-left: 20px; /*lo coloca justo al lado del logo pero con un pequeño espacio*/
+}
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: 60px;
+    z-index: 2;
+    font-size: 1.5;
+    margin: -10px;
+    display: none;
+}
+
+/*Aqui empezamos el SHOWCASE*/
+
+/*vamos a darle un margen arriba y abajo al hr para que no este pegado a la imagen principal*/
+hr{
+    margin: 10px 0;
+    
+}
+
+
+.showcase{
+    width: 100%;
+    height:550px;
+    color:#000000;
+    /*vamos a poner una imagen principal de fondo que abarque el 100% de la pantalla de ancho cn una imagen de pexels.com*/
+    background: url(imagenes/la-red3.jpg) no-repeat center center/cover;
+    /*Ahora vamos a separarla de resto, de los elementos de navegacion y de lo que podria estar por debajo*/
+    padding: -10px;
+    /* esto es para que no este pegado con las imagenes de abajo*/
+    margin-bottom: 15px;
+    /*el display flex es para centrar el texto que esta dentro de la imagen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/*Vamos a hacer un boton que abarque el texto read more */
+.btn{
+
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight:bold ;
+    padding:10px 20px ;
+    background: #262626 ;
+    color:#ffffff;
+    font-size:15px;
+    border: 1px solid #fff;
+    margin: 10px 0;
+}
+/*Vamos  a hacer que el boton cambie a un color mas opaco cuando pasemos el cursor sobre el */
+.btn:hover{
+    opacity: 0.7;
+}
+/*Ahora vamos a cambiar los textos que estan dentro de la imagen para que no esten tan pegados*/
+.showcase h2
+.showcase p{
+    margin-bottom: 10px;
+        
+}
+
+/*Aqui empieza el NEWS CARDS*/
+.news-cards{
+    display: grid;/*Vamos a utilizar las grillas de CSS*/
+    grid-template-columns: 1fr 1fr 1fr 1fr  ; /*Esto nos permitira trabajar con columnas la otra forma de trabajar con ellas es :repeat(4,1fr)*/
+    
+    /*Estoes un espaciado interno para que las imagenes no esten tan juntas*/
+    gap: 25px;
+    /*Vamos a ponerle un margen a las tarjetas  arriba, a los lados por que vamos a tener mas elementos*/
+    margin: 20px 0;
+}
+
+.news-cards img{
+    width: 100%;
+    height: 180px;
+}
+/*Vamos a cambiar el tamaño de la letra y el margen*/
+.news-cards h3{
+    font-size: 16px;
+    margin: 10px 0;
+
+}
+/*Vamos a cambiar para que parezcan enlaces y no como textos (min. 31)*/
+.news-cards a{
+    /*para ponerle un relleno*/
+    padding: 10px 0;
+     /*Cambiarle el color a la fuente*/
+    color: #f2f2f2;
+     /*Convertir la fuente a mayuscula*/
+    text-transform:uppercase;
+     /**/
+    display: inline-block;
+     /* el marcado de la letra*/
+     font-weight: bold;
+}
+
+/*Vamos a hacer un efecto de subrayado en la etiqueta a*/
+.news-cards a:hover{
+    text-decoration:underline;
+}
+
+/*Cards banner One*/
+.banner-one{
+    width: 100% ;
+    height: 350px;
+    background: url('./imagenes/fondo.jpg') no-repeat center center/cover;
+    margin-bottom: 10px;
+    font-size: 20px;
+    
+}
+/*Para acomodar el texto que esta  dentro de la imagen  */
+.banner-one .content{
+    width: 40%;
+/* 90px arriba,0 abajo,0 a la derecha 30 a la izquierda*/
+    padding: 60px 0 0 30px;
+    color:#ffffff;
+}
+
+/*Vamos a ponerles un margen para qu se separen entre ellos*/
+
+.banner-one p,
+.banner-one h2{
+    margin: 10px 0 20px 0;
+} 
+
+/*Aui empieza el Banner Two (es lo mismo que el banner one solo cambia la imagen)*/
+.banner-two{
+    width: 100% ;
+    height: 350px;
+    background: url('./imagenes/patron2.jpg') no-repeat center center/cover;
+    margin-bottom: 40px;
+    
+    padding: 10px;
+    /* esto es para que no este pegado con las imagenes de abajo*/
+    margin-bottom: 15px;
+    /*el display flex es para centrar el texto que esta dentro de la imagen*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+.banner-two .content{
+    width: 40%;
+/* 90px arriba,0 abajo,0 a la derecha 30 a la izquierda
+    padding: 90px 0 0 30px;*/
+    color:#ffffff;
+}
+
+/*Vamos a ponerles un margen para qu se separen entre ellos*/
+
+.banner-two p,
+.banner-two h2{
+    margin: -20px 0 20px 0;
+} 
+
+/* Social... (Aqui vamos a empezar a manipular nuestros iconos de redes sociales)*/
+.social{
+    /*le vamos a poner un margen para todos los lados (arriba,abajo y hacia los lados*/
+    margin: 50px;
+}
+
+.social p{
+    
+  /*vamos a alinear al centro y aumentar el tamaño de la letra de "Follow DeporTech"*/
+  text-align: center;
+  font-size: 30px;
+  /*Aui le vamos a poner un margen para que se vea como un titulo*/
+  margin-bottom: 20px;
+  
+
+}
+/*Vamos a manipular los logos de las redes sociales*/
+.links{
+    /*Vamos a centrar los logos abajo del "Follow DeporTech"*/
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+/*Aqui le vamos a poner un argen de 0 arriba y abajo, y 30 hacia los lados*/
+.links a {
+    margin: 0 30px;
+}
+
+/*Alos iconos les vamos a aumentar el tamaño*/
+.links a i{
+    font-size: 2rem;
+}
+
+/*Vamos a alinear los footers-links*/
+.footer-links{
+    /*primero vamos a poner un color de fondo*/
+    background: #2f3640;
+     /*vamos a poner un color a los textos */
+     color: #616161;
+     /*Vamos a poner un tamaño de fuente de...*/
+     font-size: 12px;
+     /*vamos a hacer que dentro de nuestro recuadro nos recorra 35px hacia  arriba y abajo y 0 a los lados*/
+     padding: 35px 0;
+}
+/*Aqui vamos a centrar el contenido (cuadricula de visualizacion)*/
+.footer-container{
+    display: grid;
+    /*Vamos a hacer que se alinien y columnas (columnas de plantilla de cuadricula)*/
+    grid-template-columns: repeat(2, 1fr);
+    /*Vamos a hacer un espaciado entre columnas*/
+    gap:10px;
+
+    align-items:flex-start;
+    justify-content: center;
+    
+}
+.footer-container ul{
+    margin: 0 auto;
+    font-size: 12px;
+}
+.footer-container ul li{
+    /*Vamos a hacer que esten separados los <li>*/
+    line-height: 2.8;
+
+}
+.footer-container  h3:hover {
+    border-bottom: 2px  solid #ffffff;
+}
+.footer{
+    /*pone un fondo de pantalla del mismo  color que el recuadro de arriba es decir lo extiende*/
+    background:#2f3640;
+    /*Cambia el color de las letras*/
+    color: #616161;
+    /*Cambia el tamaño de las letras*/
+    font-size: 12px;
+    /*depega el texto de la orilla de la pantalla 20px arriba y abajo del background y 120 a los lados*/
+    padding: 20px 0;
+    /*alinea al centro el texto*/
+    text-align: center;
+    /*La propiedad padding-bottom describe cuanto espacio colocar entre el borde inferior y el contenido del selector. */
+    padding-bottom: 10px   
+}
+
+/*Vamos a ajustar nuetra pagina a un tamaño que se vea bien cuando visiten la pagina desde un celular */
+@media(max-width:700px){
+    .menu-btn{
+        display: block ;
+    }
+
+    .nav-main ul.nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background:#2f3640;
+        height:100% ;
+        padding: 30px ;
+        opacity: 0.8; 
+        /* este es para que se esconda el fondo de las etiquetas de la izquierda */
+        transform: translateX(-400px);
+        /*Esto solamente es para añadir un efecto y que no salga el fondo de las etiquetas de la izquierda tan bruscamente*/
+        transition: transform .5s ease-in-out;
+    }
+
+    .nav-main ul.nav-menu.show{
+        /*Esto es para que cuando se de la instruccion "show" aparezca el fondo de las etiquetas de la izquierda*/
+        transform: translateX(-20px);
+    }
+
+
+    .nav-main ul.nav-menu li{
+
+        padding:20px ;
+        font-size: 14px;
+
+    }
+
+    .nav-main ul.nav-menu-right{
+        margin-right: 60px;
+    }
+
+
+   .news-cards{
+       grid-template-columns: repeat(2, 1fr);
+   }
+
+   banner-one.content,
+   banner-two.content{
+    width: 80%;
+    }
+
+    .footer-links .footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+   
+}
+
+/*Esto va a ser cuando la pantalla sea mas pequeña*/
+@media(max-width:500px){
+    .news-cards{
+        grid-template-columns: 1fr;
+    }
+    /*Vamos a hacer mas grandes las imagenes*/
+    .news-cards img{
+        height: 270px;
+    }
+    /*Vamos a acomodar todo el texto de los baners que cubran toda la pantalla*/
+    .banner-one .content,
+    .banner-two .content{
+        width: 100%;
+        padding: 60px 20px;
+    }
+    /*Vamos a acomodar todo lo que tenga el footer en una sola columna*/
+    .footer-links .footer-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
